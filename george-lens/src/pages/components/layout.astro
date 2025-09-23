@@ -1,0 +1,22 @@
+---
+//javascript section
+interface Props{
+    pageTitle?: string; // signo de interrogacion hace que sea una condicional si hay valor lo agrega si no hay lo deja en blanco
+    pageDescription?:string;//variable tipo string donde almacenara descripcion de pagina
+}
+const {pageTitle,pageDescription} = Astro.props; //variables donde guardara el titulo y descripcion de la pagina
+---
+<!-- Objetivo: esta archivo es una plantilla para reutilizar codigo base, donde no se modificara y se usara en otras paginas. -->
+<!-- html section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content={pageDescription}>
+     <title>George Lens | {pageTitle}</title> <!--agregamos valor que se agregara en el titulo de la pagina -->
+</head>
+<body>
+    <slot/>
+</body>
+</html>

@@ -1,0 +1,29 @@
+---
+//Javascript Section
+//Inicializacion de variables y tipo
+interface Props{
+    cardTitle?:string;
+    cardContent?:string;
+}
+//declaracion de variables
+const {cardTitle,cardContent} = Astro.props;
+---
+ <!--Objetivo: este archivo es una representacion de como hacer un modulo en html. por ejemplo: armar secciones en pagina web que se repetiran como bloques de imagenes con texto o sliders cualquier cosa. -->
+<!-- Html Section -->
+<div class="card">
+    <h2>{cardTitle}</h2>
+    <p>{cardContent}</p>
+</div>
+
+<style>
+    .card{
+        background-color:black;
+        color:white;
+        border: 1px solid gray;
+        border-radius:10px;
+        width:300px;
+        height:auto;
+        padding:30px;
+    }
+    
+</style>

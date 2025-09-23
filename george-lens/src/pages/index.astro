@@ -1,16 +1,11 @@
 ---
+import Layout from "./components/layout.astro";
+import Card from "./components/Card.astro";
 
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<!-- el parametro pageTitle y pageDescription enviara el titulo y descripcion de la pagina a Layout.astro -->
+<Layout pageTitle="Home" pageDescription="Pagina de inicio de portafolio"> 
+<h1>Main Page</h1>
+<p>bienvenidos ami blog</p>
+<Card cardTitle="esto es" cardContent="una carta bonita y chula"/>
+</Layout>
