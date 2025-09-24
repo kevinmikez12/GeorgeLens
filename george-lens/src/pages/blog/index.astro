@@ -1,13 +1,13 @@
 --- 
 import Layout from ".././components/layout.astro";
-import BgImage from "../../images/logo.png";
+import BgImage from "../../images/Temiqui (1).png";
 
 const posts = await Astro.glob('../blog/posts/*.md');
 console.log();
 ---
 
 <Layout pageTitle="Blog" pageDescription="Aqui se mostraran todos los posts creados.">
-    <h1>Post</h1>
+    <h1 class="text-9xl text-red-600">Post</h1>
     <img src={BgImage.src} alt="" width="150" height="150">
     <ul>
         {//estos parentesis te permiten agregar JS en HTML
